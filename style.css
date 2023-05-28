@@ -34,19 +34,19 @@
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    justify-content: center;
 }
 
 .section-input{
     position: relative;
     height: 35rem;
-    width: 60%;
+    width: 50%;
 }
 .container-input{
-    position: absolute;
-    width: 100%;
+    width: 90%;
     height: auto;
-    padding-left: 8%;
-    padding-right: 4%;
+    padding-left: 6%;
+    padding-right: 2%;
 }
 .text-area{
     width: 100%;
@@ -69,26 +69,20 @@
         outline: none;
 }
 .reglas{
-    position: absolute;
     display: flex;
-    bottom: 30%;
-    padding-left: 12%;
     align-items: center;
     gap: 10px;
+    justify-content: center;
 }
 .informacion{
     color: #495057;
-    font-size: 18px;
+    font-size: 1.1rem;
 }
 
 .botones{
-    position: absolute;
     display: flex;
-    width: 100%;
-    bottom: 15%;
-    padding-left: 9.5%;
-    padding-right: 3.5%;
-    justify-content: space-between;
+    width: 90%;
+    padding-left: 8%;
 }
 .btn-desencriptar{
     background: #D8DFE8;
@@ -99,6 +93,7 @@
     margin-left: 4%;
     width: 60%;
     padding: 0.7rem 0.9rem;
+    font-size: 1.2rem;
     transition: 0.5s all;
 }
 .btn-desencriptar:hover{
@@ -113,6 +108,7 @@
     width: 60%;
     margin-right: 2%;
     padding: 0.7rem 0.9rem;
+    font-size: 1.2rem;
     transition: 0.5s all;
 }
 .btn-encriptar:hover{
@@ -122,8 +118,8 @@
 .section-result{
     padding-right: 5%;
     padding-left: 2%;
-    width: 40%;
-    height: 480px;
+    width: 30%;
+    height: 540px;
 }
 .container-result{
     display: flex;
@@ -234,9 +230,6 @@
         grid-column-start: 1;
         grid-column-end: 3;
     }
-    .reglas{
-        bottom: 115px;
-    }
 }
 
 /* SMALLER TABLETS */
@@ -257,15 +250,10 @@
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr;
         bottom: 1rem;
-        padding: 0 5%;
     }
     .btn-encriptar{
         grid-column-start: 1;
         grid-column-end: 2;
-    }
-    .reglas {
-        bottom: 11.5rem;
-        padding-left: 5%;
     }
     .section-result{
         width: 100%;
