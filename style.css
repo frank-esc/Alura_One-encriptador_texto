@@ -20,12 +20,14 @@
 }
 .logo {
     width: 4.5rem;
-    margin-right: 15px;
 }
 .text_titulo {
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
+}
+.home{
+    width: 3.5rem;
 }
 
 .area-principal{

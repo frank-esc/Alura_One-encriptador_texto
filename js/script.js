@@ -1,6 +1,6 @@
 const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
-const imagen = document.querySelector(".container-image img")
+const imagen = document.querySelector(".container-image img");
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -31,8 +31,12 @@ function encriptar(stringEncriptada){
         }
         if (stringEncriptada.trim().length > 0) {
           imagen.style.display = 'none';
+          mensaje.style.height = "100%";
+          
         } else {
           imagen.style.display = 'block';
+          mensaje.style.height = "5rem";
+          
         }
     }
     return stringEncriptada
@@ -57,8 +61,12 @@ function desencriptar(stringDesencriptada){
         }
         if (stringDesencriptada.trim().length > 0) {
           imagen.style.display = 'none';
+          mensaje.style.height = "100%";
+          
         } else {
           imagen.style.display = 'block';
+          mensaje.style.height = "5rem";
+          
         }
     }
     return stringDesencriptada
