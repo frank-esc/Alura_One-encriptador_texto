@@ -1,5 +1,6 @@
 const textArea = document.querySelector(".text-area");
 const mensaje = document.querySelector(".mensaje");
+const imagen = document.querySelector(".container-image img")
 
 // La letra "e" es convertida para "enter"
 // La letra "i" es convertida para "imes"
@@ -11,7 +12,7 @@ function btnEncriptar(){
     const textoEncriptado = encriptar(textArea.value)
     mensaje.value = textoEncriptado
     textArea.value = "";
-    mensaje.style.backgroundImage = "none"
+    imagen.style.backgroundImage = "none"
 }
 
 function encriptar(stringEncriptada){
@@ -28,7 +29,11 @@ function encriptar(stringEncriptada){
             stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
 
         }
-
+        if (stringEncriptada.trim().length > 0) {
+          imagen.style.display = 'none';
+        } else {
+          imagen.style.display = 'block';
+        }
     }
     return stringEncriptada
 }
@@ -37,7 +42,7 @@ function btnDesencriptar(){
     const textoDesencriptado = desencriptar(textArea.value)
     mensaje.value = textoDesencriptado
     textArea.value = "";
-    mensaje.style.backgroundImage = "none"
+    imagen.style.backgroundImage = "none"
 
 }
 
@@ -50,7 +55,11 @@ function desencriptar(stringDesencriptada){
             stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1] , matrizCodigo[i][0])
 
         }
-
+        if (stringDesencriptada.trim().length > 0) {
+          imagen.style.display = 'none';
+        } else {
+          imagen.style.display = 'block';
+        }
     }
     return stringDesencriptada
 }
@@ -60,6 +69,7 @@ function copiarTexto() {
   const botonCopiar = document.querySelector('.btn-copiar');
 
   if (botonCopiar.textContent === 'Copiar') {
+    if (textoCopiado.value && textoCopiado.value.trim() !== '') {
     navigator.clipboard.writeText(textoCopiado.value)
       .then(() => {
         console.log('Texto copiado al portapapeles');
@@ -68,6 +78,10 @@ function copiarTexto() {
       .catch((err) => {
         console.error('Error al copiar texto: ', err);
       });
+    } else {
+      console.log('No hay texto para copiar');
+      alert("No hay texto para copiar");
+    }
   } else {
     navigator.clipboard.readText()
       .then((text) => {

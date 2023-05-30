@@ -12,7 +12,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
     padding: 0 5%;
     height: 5rem;
@@ -39,7 +39,6 @@
 
 .section-input{
     position: relative;
-    height: 35rem;
     width: 50%;
 }
 .container-input{
@@ -216,44 +215,17 @@
       font-size: 0.9rem;
     }
 }
-
-/* TABLETS */
-@media only screen and (max-width: 768px) {
-    .text_area {
-        max-height: 300px;
-    }
-    .botones {
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    }
-    .btn-encriptar {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-}
-
-/* SMALLER TABLETS */
-@media ONLY screen and (max-width: 600px) {
+/*TABLETS*/
+@media only screen and (max-width: 820px) {
 
     .section-input {
         width: 100%;
     }
-
-    .container-input{
-        padding: 0 5%;
-    }
-
     .text-area {
         max-height: 15rem;
     }
     .botones{
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
         bottom: 1rem;
-    }
-    .btn-encriptar{
-        grid-column-start: 1;
-        grid-column-end: 2;
     }
     .section-result{
         width: 100%;
